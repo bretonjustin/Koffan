@@ -152,6 +152,19 @@ docker run -d -p 80:80 -e APP_PASSWORD=your-password -v koffan-data:/data koffan
 4. Add environment variable `APP_PASSWORD` with your password
 5. Deploy
 
+### Home Assistant
+
+Run Koffan as a Home Assistant add-on:
+
+1. In Home Assistant, go to **Settings** → **Add-ons** → **Add-on Store**
+2. Click the three dots menu (⋮) → **Repositories**
+3. Add: `https://github.com/PanSalut/Koffan`
+4. Find "Koffan" in the add-on store and click **Install**
+5. Configure password and language in the add-on settings
+6. Start the add-on and access Koffan on port 3000
+
+Data is stored in `/config/shopping.db` within your Home Assistant configuration.
+
 ### Persistent Storage
 
 Data is stored in `/data/shopping.db`. The volume ensures your data persists across deployments.

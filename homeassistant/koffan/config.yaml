@@ -1,0 +1,24 @@
+name: "Koffan"
+description: "Self-hosted shopping list with real-time sync"
+version: "1.6.9"
+slug: "koffan"
+url: "https://github.com/PanSalut/Koffan"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: "Web interface"
+map:
+  - addon_config:rw
+options:
+  password: "shopping123"
+  language: "en"
+  api_token: ""
+schema:
+  password: str
+  language: list(en|pl|de|es|fr|pt|uk|no|lt|el|sk)
+  api_token: str?
